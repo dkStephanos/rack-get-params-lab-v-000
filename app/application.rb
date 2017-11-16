@@ -17,6 +17,7 @@ class Application
     elsif req.path.match(/cart/)
       @@cart.each do |cart_item|
         resp.write "#{cart_item}\n"
+      end
     elsif req.path.match(/add/)
 
       selected_item = req.params["item"]
