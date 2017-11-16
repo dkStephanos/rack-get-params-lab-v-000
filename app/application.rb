@@ -18,9 +18,9 @@ class Application
       @@cart.each do |cart_item|
         resp.write "#{cart_item}\n"
     elsif req.path.match(/add/)
- 
+
       selected_item = req.params["item"]
- 
+
       if @@items.include?(selected_item)
         @@cart << selected_item
         resp.write "#{selected_item} has been added to the cart."
