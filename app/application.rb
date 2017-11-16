@@ -28,7 +28,7 @@ class Application
 
       if @@items.include?(selected_item)
         @@cart << selected_item
-        resp.write "#{selected_item} has been added to the cart."
+        resp.write "#added {selected_item}"
       else
         resp.write "Couldn't find #{selected_item}"
       end
